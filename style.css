@@ -1,0 +1,276 @@
+*{
+    padding: 0;
+    margin: 0;
+   
+}
+@font-face{
+    font-family: "my fonts";
+    src: url("/avenir_ff/AvenirLTStd-Book.otf");
+}
+html{
+   font-size:  62.5%;
+   font-family: my fonts;
+}
+
+main{
+    width: 100%;
+    /* height: 100vh; */
+    background-image: url('./assets/mobile/intro_bg.jpg');
+    background-size: 100% 100%;
+    /* background: black; */
+    color: white;
+    position: relative;
+}
+/* -------------------HOME PAGE STARTS-------------- */
+header
+{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+
+    position: relative;
+}
+#top-nav{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    position: relative;
+    /* display: none; */
+    transition: .2s all ease-out;
+}
+header .logo{
+    /* background: yellow; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header  h1{
+    text-align: center;
+}
+
+header h1 span{
+    font-size: 1.1rem;
+}
+header .menu{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 20rem;
+    font-size: 1.6rem;
+
+}
+header .menu img{
+    width: 2rem;
+    cursor: pointer;
+}
+header .menu a{
+    color: white;
+    text-decoration: none;
+}
+.categories{
+    /* width: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 4rem;
+    /* background-color: yellow; */
+    flex-wrap: wrap;
+    /* display: none; */
+    transition: .2s all ease-out;
+
+
+}
+.categories .card {
+    width: 32rem;
+    height: 50rem;
+    position: relative;
+    margin: 1rem 1.3rem;
+    /* z-index: -1; */
+}
+.hoverClass {
+    border: 1px solid red;
+}
+.categories .card img{
+    width: 100%;
+    height: 100%;
+    /* position: absolute; */
+}
+.categories .card .title{
+    position: absolute;
+    font-size: 3rem;
+    bottom: 1.1rem;
+    /* padding: 0 1.7rem; */
+    width: 100%;
+    margin: auto;
+}
+.categories .card .title h1{
+    /* border-bottom: 1px solid red; */
+}
+main .footer{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    margin: 1.2rem 0;
+    align-items: baseline;
+    /* text-align: center; */
+    font-size: 1.3rem;
+    /* background-color: yellow; */
+}
+main .footer a{
+    background: rgba(255,255,255,0.2);
+    padding:1rem 1.3rem;
+    border-radius: 50%;
+}
+/* -----------------------Navbar----------------- */
+header nav{
+    position: absolute;
+    width: 100%;
+    /* background-color: yellow; */
+    /* height: 100vh; */
+    z-index: 9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    display: none;
+    transition: .2s all ease-out;
+
+}
+header nav ul{
+    display: flex;
+}
+header nav ul li{
+    margin: 0 1rem;
+    list-style: none;
+}
+header nav ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.dropdown {
+    width: 100%;
+    /* background-color: green; */
+    display: flex;
+    margin: 4rem 0;
+    transition: .2s all ease-out;
+    display: none;
+
+}
+.dropdown .sport,
+.dropdown .culture,
+.dropdown .take-action{
+    display: flex;
+}
+
+.dropdown .card{
+    width: 32rem;
+    height: 50rem;
+    margin :2rem 1rem;
+    position: relative;
+}
+
+.dropdown .card img{
+    width: 100%;
+    height: 100%;
+}
+.dropdown .card .title{
+
+    position: absolute;
+    font-size: 3rem;
+    bottom: 1.1rem;
+    /* padding: 0 1.7rem; */
+    width: 100%;
+    margin: auto;
+}
+.card{
+    transition: .5s linear all;
+    cursor: pointer;
+    /* overflow: hidden; */
+    display: flex;
+    align-items: center;
+    background-position: center;
+    overflow: hidden;
+}
+.card .content{
+    font-size: 1.7rem;
+}
+.explore-container{
+    display: none;
+}
+.explore-container .explore{
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    border: 2px solid white;
+    background: none;
+    color: white;
+
+}
+.card img{
+    transition: .4s;
+    overflow: ;
+}
+
+.card:hover .title{
+    bottom: 26rem;
+    left: -2rem;
+    z-index: 999;
+}
+
+.card:hover .explore-container{
+    display: block;
+}
+.card:hover img{
+    transform: scale(1.1);
+    z-index: 1;
+
+}
+
+
+/* -----------------------RESPONSIVENESS---------------------- */
+
+@media (max-width:360px){
+    .categories{
+        width: 100%;
+        padding: 0;
+        
+    }
+    header{
+    }
+   
+    .categories .card {
+        width: 60rem;
+        height: 30rem;
+        margin: 1rem ;
+    }
+}
+
+@media (max-width: 576px) {
+    header .name{
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+
+ }
+
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 1200px) {
+   
+ }
+
+@media (max-width: 1400px) { 
+
+}
